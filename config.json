@@ -1,0 +1,14 @@
+
+{
+    "title": "Video Wall Slideshow",
+    "subTitle": "2x2",
+    "description": "A simple 2x2 video wall slideshow solution.",
+    "contact": "Imageless Thought",
+    "contact-email": "baggett.michael@gmail.com",
+    "slides": "slides", 
+    "show_files": "index.csv",
+    "image": "images",
+    "video": "videos",
+    "template": "templates",
+    "head": "head"
+}

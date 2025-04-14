@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="../images/robot.svg">
+  <title>JSON Generator</title>
+  <link rel="stylesheet" href="css/json_defaults.css">
+  <script src="scripts/json_create.js"></script>
+  <style>
+
+  </style>
+</head>
+<body>
+  <button id="download" title="Download the CSS used with the videowall_app for customization.">Download CSS</button>
+  <h1>JSON Generator: <span>Videowall Slide Maker</span></h1>
+  <div class="container">
+    <div id="middle" class="column">
+      <form>
+        <div class="oneline">
+          <h2>Create A Slide</h2>
+          <h5>You don't have to include all properties for an item: simply leave it as null and it will be skipped.</h5>
+        </div>
+        <!-- Static Slide-Level Fields -->
+        <label>
+          <span class="label-text">Title: </span>
+          <input type="text" id="title">
+        </label><br>
+        
+        <label>
+          <span class="label-text">Head: </span> 
+          <select id="head"></select>
+        </label><br>
+        <div id="headInputContainer" style="display:none;">
+          <input type="text" id="head_input" placeholder="enter custom text" class="custom_json">
+        </div>
+        
+        <label>
+          <span class="label-text">Layout: </span>
+          <select id="layoutType"></select>
+        </label><br>
+        
+        <label>
+          <span class="label-text">Layout Customization: </span>
+          <select id="layout_Customization"></select>
+        </label><br>
+        <div id="layout_CustomizationInputContainer" style="display:none;">
+          <input type="text" id="layout_Customization_input" placeholder="enter custom text" class="custom_json">
+        </div>
+        
+        <label>
+          <span class="label-text">Content Child: </span>
+          <input type="text" id="contentChild">
+        </label><br>
+        
+        <label>
+          <span class="label-text">Duration: </span>
+          <input type="text" id="duration">
+        </label><br>
+        
+        <label>
+          <span class="label-text">Fade: </span>
+          <select id="fade"></select>
+        </label><br>
+        <div id="fadeInputContainer" style="display:none;">
+          <input type="text" id="fade_input" placeholder="enter custom text" class="custom_json">
+        </div>
+        
+        <label>
+          <span class="label-text">Timer: </span>
+          <select id="timer"></select>
+        </label><br>
+        
+        <label>
+          <span class="label-text">Timer Style: </span>
+          <select id="timerStyle"></select>
+        </label><br>
+        <div id="timerStyleInputContainer" style="display:none;">
+          <input type="text" id="timerStyle_input" placeholder="enter custom text" class="custom_json">
+        </div>
+        
+        <label>
+          <span class="label-text">Begin Rotation: </span>
+          <select id="beginRotation"></select>
+        </label><br>
+        <div id="beginRotationInputContainer" style="display:none;">
+          <input type="text" id="beginRotation_input" placeholder="enter custom text" class="custom_json">
+        </div>
+        
+        <label>
+          <span class="label-text">End Rotation: </span>
+          <select id="endRotation"></select>
+        </label><br>
+        <div id="endRotationInputContainer" style="display:none;">
+          <input type="text" id="endRotation_input" placeholder="enter custom text" class="custom_json">
+        </div>
+        
+        <label>
+          <span class="label-text">Launch: </span>
+          <select id="launch"></select>
+        </label><br>
+        <div id="launchInputContainer" style="display:none;">
+          <input type="text" id="launch_input" placeholder="enter custom text" class="custom_json">
+        </div>
+        
+        <label>
+          <span class="label-text">Launch Wait: </span>
+          <select id="launch_wait"></select>
+        </label><br>
+        
+        <label>
+          <span class="label-text">Launch Wait Slide: </span>
+          <select id="launch_wait_slide"></select>
+        </label><br>
+        <div id="launchWaitSlideInputContainer" style="display:none;">
+          <input type="text" id="launch_wait_slide_input" placeholder="enter custom text" class="custom_json">
+        </div>
+        
+        <label>
+          <span class="label-text">Launch Wait Class: </span>
+          <select id="launch-wait-class"></select>
+        </label><br>
+        <div id="launch-wait-classInputContainer" style="display:none;">
+          <input type="text" id="launch-wait-class_input" placeholder="enter custom text" class="custom_json">
+        </div>
+        
+        <p class="insert_elements">
+          The elements for the <b>layout selected above</b> are shown below.
+          Add your items along with their properties for each element.
+        </p>
+        <!-- Dynamic Items Container -->
+        <div id="elements"></div>
+        <br>
+        <button type="submit" id="generateJsonButton">Generate JSON</button>
+      </form>
+      <div class="exportJSON">
+        <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        <button onclick="downloadJSON()">Download JSON</button>
+      </div>
+      <h2>Generated JSON:</h2>
+      <pre id="output">Your <b>JSON slide</b> will output here.</pre>
+    </div>
+    <div id="instructions" class="column"></div>
+    <div id="layout-info" class="column">
+      <p>Loading layout details...</p>
+    </div>
+  </div>
+  <script>
+    document.getElementById('download').addEventListener('click', function() {
+      // Use fetch to get the CSS file as a blob.
+      fetch('/developr/videowall/css/defaults.css')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.blob();
+        })
+        .then(blob => {
+          // Create a temporary URL for the blob.
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.style.display = 'none';
+          a.href = url;
+          // Set the filename for the downloaded file.
+          a.download = 'videowall.css';
+          document.body.appendChild(a);
+          a.click();
+          // Cleanup the URL and remove the element.
+          window.URL.revokeObjectURL(url);
+          document.body.removeChild(a);
+        })
+        .catch(error => {
+          console.error('Download error:', error);
+          alert('Failed to download the CSS file.');
+        });
+    });
+  </script>
+</body>
+</html>

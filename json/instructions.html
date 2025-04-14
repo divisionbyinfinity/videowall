@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="css/json_defaults.css">
+<div class="json_instructions">
+<h2>JSON Generator Instructions</h2>
+<p class="instruction_title">Slide Definitions</p>
+<ul class="small">
+    <li><b>Title</b>: This can be any text, no one will see it but it helps you identify your slides.</li>
+    <li><b>Head</b>: The <strong>&lthead&gt&lt/head&gt</strong> properties added to the page. Custom CSS <strong>(you can download the default.css using the button at the top of the screen)</strong> could be specfied here.</li>
+    <li><b>Layout</b>: Specifies the <strong>slide layout</strong> you want to use for your slide.</li>
+    <li><b>Layout Customization</b>: <strong>application slides</strong> require customizations. Leave this as <strong>null</strong> for general slides.</li> 
+    <li><b>Content Child</b>: specifies the <strong>server subfolder</strong> for the content files (images/videos) used on the slide.</li>
+    <li><b>Duration</b>: full duration for the slide to be displayed. You can enter <strong>seconds</strong> or <strong>milliseconds</strong>.</li>
+    <li><b>Fade</b>: The is <strong>fade-in time</strong> in milliseconds for a slide when it initially loads.</li>
+    <li><b>Timer</b>: Enable to display a timer on your slide: useful for troubleshooting.</li>
+    <li><b>Timer Style</b>: Available with a green or red background. More can be added.</li>
+    <li><b>Begin Rotation</b>: You can specify a time, or date and time for a slide to enter the slideshow.</li>
+    <li><b>End Rotation</b>: You can specify a time, or date and time for a slide to be removed from the slideshow.</li>
+    <li><b>Launch</b>: You can specify a time (runs every dat at that time), or date and time for a scheduled slide.</li>
+    <li><b>Launch Wait</b>: For slides with a scheduled start, how long before do you want the announcement displayed.</li>
+    <li><b>Launch Wait Slide</b>: Choose the slide used to announce a presentation is beginning.</li>
+    <li><b>Launch Wait Class</b>: Styles applied to the slide used to announce a presentation is scheduled to begin.</li>
+</ul>
+<p class="instruction_title">Elements and Items</p>
+<p>Several layouts are available to choose from. The number of <strong>elements</strong> is the <strong>number of cells in a layout</strong>. When you select a layout, the number of elements in the layout are automatically added for you to populate with your items. An <strong>item</strong> can be an <strong>image</strong> or <strong>video</strong>. When you add an item, there are additional properties you can define using the form that appears after clicking <strong>add item</strong>.</p>
+<p><strong>Items</strong> within an element are displayed sequentially on the slide and each item can have its own unique <strong>optional</strong> properties. Item duration values can be specified as a <strong>percentage (decimal value)</strong>, in <strong>milliseconds</strong>, or in <strong>seconds</strong>: the script will convert whatever you put in this field to milliseconds. <b>The total display time for a slide is determined by the <strong>duration</strong> specified in the top menu. When this time is reached, the slide will advance to the next slide in the index, even if the item currently being displayed has not reached the end of its display time: make sure your slide duration accounts for the sum of the item durations</b>. Using a decimal lets you specify a percentage of the total duration as the item duration. Example: If you have four items, <strong>0.25</strong> for the item duration of each item will result in each item being displayed for 25% of the slide duration. <strong>0.125</strong> will result in each item being displayed <strong>twice</strong>, the items will be cycled through twice.</p>
+<p>Some layouts have cells that are <i>not</i> all the same size and the content will need to have an aspect-ratio that matches the cell dimensions. Review the <strong>layout-specific instructions</strong> that will appear on the right-hand side of the screen when you select a layout so you know which element corresponds to which cell.</p>
+<p class="instruction_title">Item Properties</p>
+<ul class="small">
+    <li><b>Content Type</b>: This is where you specify if the item is an <strong>image</strong> or a <strong>video</strong>.</li>
+    <li><b>Content</b>: This is where you specify the filename of your image or video.</li>
+    <li><b>Item Duration</b>: This is where you specify the display duration for an item in a decimal, seconds, or milliseconds.</li>
+    <li><b>QR ID</b>: Specifies the corner to display a QR code.</li>
+    <li><b>QR FIle</b>: These are the QR code images available: <strong>default images redirect to the CVAD homepage</strong>.</li>
+    <li><b>Alt ID</b>: Specifies the corner to display an Alt image.</li>
+    <li><b>Alt File</b>: These are the Alt images available to choose from.</strong>.</li></li>
+    <li><b>Alt BG</b>: If using an Alt image that is transparent, you may want to see a background color.</li>
+    <li><b>Title Class</b>: This for the positioning of overlaid text and style properties.</li>
+    <li><b>Slide Title</b>: Title of the overlaid text.</li>
+    <li><b>Description</b>: Text content of the overlaid text.</li>
+</ul>
+</div>

@@ -1,0 +1,76 @@
+{
+  "title": "Videowall Launch Slide: This is shown before a scheduled presentation begins.",
+  "head": "default",
+  "layoutType": "Grid (4)",
+  "layout": "grid_4",
+  "layout_Customization": "wait_launch",
+  "contentChild": "demo",
+  "duration": 16000,
+  "fade": 3000,
+  "timer": "no",
+  "timerStyle": null,
+  "launch": "launch-wait-class",
+  "launch-wait": null,
+  "launch-wait-slide": null,
+  "launch-wait-class": "countdown_bottom-right",
+    "element_001": {
+    "item_001": {
+      "contentType": "image",
+       "content": "announce.svg",
+       "item_duration": 16000,
+       "qrId": null,
+       "qrFile": null,
+       "altId": null,
+       "altFile": null,
+       "altBg": null,
+       "titleClass": null,
+       "slideTitle": null,
+       "description": null
+      }
+    },
+    "element_002": {
+    "item_001": {
+       "contentType": "image",
+       "content": null,
+       "item_duration": 16000,
+       "qrId": null,
+       "qrFile": null,
+       "altId": null,
+       "altFile": null,
+       "altBg": null,
+       "titleClass": "overlay-center",
+       "slideTitle": "Presenatation Title",
+       "description": "This is the description of the presentation and it and the Title above (json: slideTitle) can be changed by editing the launch_presentation slide (json: description)."
+     }
+    },
+    "element_003": {
+    "item_003": {
+      "contentType": "image",
+       "content": "video_play.svg",
+       "item_duration": 16000,
+       "qrId": null,
+       "qrFile": null,
+       "altId": null,
+       "altFile": null,
+       "altBg": null,
+       "titleClass": null,
+       "slideTitle": null,
+       "description": null
+      }
+    },
+    "element_004": {
+    "item_004": {
+        "contentType": "image",
+        "content": null,
+         "item_duration": 16000,
+         "qrId": null,
+         "qrFile": null,
+         "altId": null,
+         "altFile": null,
+         "altBg": null,
+         "titleClass": null,
+         "slideTitle": null,
+         "description": null
+      }
+    }
+  }  

@@ -1,0 +1,1191 @@
+/* This the default.css for the videowall_app: renamed videoall.css for the download.
+   You can customize to your liking to use with the app.  
+   It controls the layouts, element positioning, and other styles 
+
+   videowall_app 
+   github repo: https://github.com/imagelessthought/videowall_app 
+   https://imagelessthought.github.io/ 
+   baggett.michael@gmail.com 
+
+  also visit https://divisionbyinfinity.github.io/ 
+  Division By Infinity has some more advanced apps you may find useful, including IoT solutions */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2d2d2d;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --slidefade: 2s;
+}
+
+/* Styles that Hide */
+
+.null,
+#null {
+  display: none !important;
+}
+
+#timer {
+  display: none !important;
+}
+
+#noshow,
+.noshow {
+  display: none !important;
+}
+
+/* Overlays for Text */
+
+.overlay-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 75%;
+  height: 75%;
+  pointer-events: none;
+  box-sizing: border-box;
+
+  .text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    background-color: rgba(236, 240, 241, 0.2);
+    border-radius: 4px;
+    margin: auto;
+    padding: 0.5rem 1.5rem 1rem 1.5rem !important;
+
+    > * {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    h1 {
+      text-shadow: #000 2px 2px 2px;
+    }
+
+    p {
+      text-align: justify;
+      margin: 0 .5rem 0.25rem .5rem;
+      text-shadow: #000 1px 1px 1px;
+      font-weight: 400;
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+  }
+}
+
+.overlay-topleft {
+  position: absolute;
+  top: 25%; /* 50% of 1080px */
+  left: 25%; /* 50% of 1920px */
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  pointer-events: none;
+  box-sizing: border-box;
+  width: 30% !important;
+
+  .text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 7rem;
+    box-sizing: border-box;
+    padding: 0.5rem 1.5rem 1rem 1.5rem;
+    background-color: rgba(236, 240, 241, 0.2);
+    border-radius: 4px;
+    margin: auto;
+
+    p {
+      text-align: center;
+      margin: 0 auto 0.25rem auto;
+      text-shadow: #000 1px 1px 1px;
+      font-weight: 400;
+      font-size: 1.35rem;
+      padding: 0 !important;
+      width: 100% !important;
+      height: 4rem;
+    }
+  }
+}
+
+.overlay-topleft-debug {
+  position: absolute;
+  top: 25%; /* 50% of 1080px */
+  left: 25%; /* 50% of 1920px */
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  pointer-events: none;
+  box-sizing: border-box;
+  width: 30% !important;
+
+  .text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 7rem;
+    box-sizing: border-box;
+    padding: 0.5rem 1.5rem 1rem 1.5rem;
+    background-color: rgba(236, 240, 241, 0.2);
+    border-radius: 4px;
+    margin: auto;
+
+    h1 {
+      font-size: 1.25rem; /* Adjusted for debugging */
+      text-shadow: none;
+      color: #c0392b;
+    }
+
+    p {
+      text-align: center;
+      margin: 0 auto 0.25rem auto;
+      text-shadow: #000 1px 1px 1px;
+      font-weight: 400;
+      font-size: 1rem;
+      padding: 0 !important;
+      width: 100% !important;
+      height: 4rem;
+    }
+  }
+}
+
+.overlay-topright {
+  position: absolute;
+  top: 25%; /* 50% of 1080px */
+  left: 75%; /* 50% of 1920px + move to the right */
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  pointer-events: none;
+  box-sizing: border-box;
+  width: 30% !important;
+
+  .text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100% !important;
+    height: 7rem;
+    box-sizing: border-box;
+    padding: 0.5rem 1.5rem 1rem 1.5rem;
+    background-color: rgba(236, 240, 241, 0.2);
+    border-radius: 4px;
+    margin: auto;
+
+    p {
+      text-align: center;
+      margin: 0 auto 0.25rem auto;
+      text-shadow: #000 1px 1px 1px;
+      font-weight: 400;
+      font-size: 1.35rem;
+      padding: 0 !important;
+      width: 100% !important;
+      height: 4rem;
+    }
+  }
+}
+
+.overlay-description {
+  position: absolute;
+  bottom: 0.25rem !important;
+  left: 0.25rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 85%;
+  pointer-events: none;
+  box-sizing: border-box;
+  padding: 0 !important;
+  margin: 0 !important;
+  .text-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    > * {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 !important;
+      margin: 0 !important;
+      text-align: left !important;
+    }
+
+    h1 {
+      font-size: 0.85rem;
+      text-shadow: #000 2px 2px 2px;
+    }
+
+    p {
+      text-align: left;
+      text-shadow: #000 1px 1px 1px;
+      font-weight: 400;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+/* Presentation Countdown Timer */
+
+#countdown_red {
+  width: 8em;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: fit-content;
+  padding: 1rem;
+  opacity: 0.8 !important;
+  background-color: rgba(244, 67, 54, 0.8);
+}
+
+#countdown {
+  position: absolute;
+  top: 75%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  font-size: 7rem;
+  text-shadow: #000 1px 1px 1px;
+  margin: 0;
+}
+
+.countdown_bottom-right {
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  opacity: 0.8 !important;
+  background-color: rgba(0, 133, 62, 0.8);
+}
+
+#scheduled_start {
+  position: absolute;
+  top: 64%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  border-radius: 4px;
+}
+
+.scheduled_start {
+font-size: 1.25rem;
+text-shadow: #000 1px 1px 1px;
+}
+
+.start_lead {
+  color: yellow;
+  text-shadow: #000 1px 1px 1px;
+}
+
+.text-box {
+  h1 {
+    text-align: center;
+    margin: 0 auto .5rem auto;
+    font-size: 2.5rem;
+    color: #aed581;
+    text-shadow: #fff 2px 2px 2px;
+    padding: 0.5rem 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  p {
+    b {
+      text-shadow: #000 1px 1px 1px;
+      color: #2ecc71;
+    }
+
+    strong {
+      text-shadow: #000 1px 1px 1px;
+      color: #f7dc6f;
+    }
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 90%;
+    box-sizing: border-box;
+    overflow: hidden; /* This prevents any child content from overflowing */
+
+    img {
+      margin: 10rem auto 0 auto;
+      display: block; /* Using block instead of flex is usually sufficient */
+      width: 30%;
+      max-width: 30%; /* This ensures the image won't exceed the container's width */
+      box-sizing: border-box;
+      z-index: 9000;
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+/* Timer Stryles */
+
+.timer-red {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5rem;
+  text-align: center;
+  background-color: #f44336;
+  opacity: 0.5;
+  text-shadow: 1px 1px 1px #000;
+  color: white;
+  padding: 0.7rem 1rem;
+  font-size: 2rem;
+  border-radius: 5px;
+  z-index: 9000;
+  /* font-family: Arial, sans-serif; */
+}
+
+.timer-green {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5rem;
+  text-align: center;
+  background-color: #00853e;
+  opacity: 0.5;
+  text-shadow: 1px 1px 1px #000;
+  color: white;
+  padding: 0.7rem 1rem;
+  font-size: 2rem;
+  border-radius: 5px;
+  z-index: 9000;
+  /*  font-family: Arial, sans-serif; */
+}
+
+#qr1,
+#alt1,
+#top-left {
+  position: absolute; /* Position the QR div relative to .grid-item */
+  top: 0; /* Align to the bottom */
+  left: 0; /* Align to the right */
+  margin: 0.5rem 0 0 0.5rem; /* Optional: Add some margin for spacing */
+}
+
+#qr2,
+#alt2,
+#top-right {
+  position: absolute; /* Position the QR div relative to .grid-item */
+  top: 0; /* Align to the bottom */
+  right: 0; /* Align to the right */
+  margin: 0.5rem 0.5rem 0 0; /* Optional: Add some margin for spacing */
+}
+
+#qr3,
+#alt3,
+#bottom-left {
+  position: absolute; /* Position the QR div relative to .grid-item */
+  bottom: 0; /* Align to the bottom */
+  left: 0; /* Align to the right */
+  margin: 0 0 0.25rem 0.5rem; /* Optional: Add some margin for spacing */
+}
+
+#qr4,
+#alt4,
+#bottom-right {
+  position: absolute; /* Position the QR div relative to .grid-item */
+  bottom: 0; /* Align to the bottom */
+  right: 0; /* Align to the right */
+  margin: 0 0.5rem 0.25rem 0; /* Optional: Add some margin for spacing */
+}
+
+.qrcode {
+  border-radius: 4px;
+  padding: 0;
+  margin: 0 auto;
+
+  img {
+    width: 3rem !important;
+    height: 3rem !important;
+    max-width: 3rem;
+    max-height: 3rem;
+    z-index: 9001;
+    border-radius: 4px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.altcode {
+  border-radius: 4px;
+  margin: 0 auto;
+
+  img {
+    width: 4rem !important;
+    height: 4rem !important;
+    max-width: 4rem;
+    max-height: 4rem;
+    z-index: 9002;
+    border-radius: 4px;
+    border-radius: 4px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.grid-item {
+  position: relative; /* Ensure relative positioning for QR code */
+}
+
+.grid-container {
+  position: relative; /* Ensure relative positioning for QR code */
+  background-color: #000; /* Optional: background color */
+}
+
+/* Templates */
+
+.single {
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+
+  .grid-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    box-sizing: border-box;
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Ensure no content extends outside the container */
+  }
+
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Fill container width */
+    height: 100%; /* Fill container height */
+    overflow: hidden; /* Prevent content overflow */
+  }
+
+  .grid-item video,
+  .grid-item img {
+    width: 100%; /* Stretch to fill container width */
+    height: 100%; /* Stretch to fill container height */
+    object-fit: contain; /* Ensure content fits without cropping */
+  }
+
+  .overlay-description {
+    position: absolute;
+    bottom: 1rem !important;
+    left: 1.5rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 85%;
+    pointer-events: none;
+    box-sizing: border-box;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    .text-box {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      background-color: transparent;
+      border-radius: 4px;
+      padding: 0 !important;
+      margin: 0 !important;
+
+      > * {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+        text-shadow: #000 2px 2px 2px;
+      }
+
+      p {
+        text-align: left;
+        text-shadow: #000 1px 1px 1px;
+        font-weight: 400;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+/* 4 Cell */
+
+.grid_4 {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .grid-item {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-item video,
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .overlay-description {
+    position: absolute;
+    bottom: 0.25rem !important;
+    left: 0.25rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 85%;
+    pointer-events: none;
+    box-sizing: border-box;
+    padding: 0 !important;
+    margin: 0 !important;
+    .text-box {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      background-color: transparent;
+      border-radius: 4px;
+      padding: 0 !important;
+      margin: 0 !important;
+
+      > * {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+      }
+
+      h1 {
+        font-size: 0.85rem;
+        text-shadow: #000 2px 2px 2px;
+      }
+
+      p {
+        text-align: left;
+        text-shadow: #000 1px 1px 1px;
+        font-weight: 400;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+/* 16 Cell */
+
+.grid_16 {
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+
+  .grid-container {
+    display: flex; /* Use flexbox for centering */
+    flex-wrap: wrap;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    box-sizing: border-box;
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Ensure no content extends outside the container */
+  }
+
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%; /* Fill container width */
+    height: 25%; /* Fill container height */
+    overflow: hidden; /* Prevent content overflow */
+  }
+
+  .grid-item video,
+  .grid-item img {
+    width: 100%; /* Stretch to fill container width */
+    height: 100%; /* Stretch to fill container height */
+    object-fit: cover; /* Ensure content fits without cropping */
+  }
+
+  
+  #qr1,
+  #alt1,
+  #top-left {
+    position: absolute; /* Position the QR div relative to .grid-item */
+    top: 0.1rem; /* Align to the bottom */
+    left: 0.3rem; /* Align to the right */
+    margin: 0; /* Optional: Add some margin for spacing */
+  }
+
+  #qr2,
+  #alt2,
+  #top-right {
+    position: absolute; /* Position the QR div relative to .grid-item */
+    top: 0.1rem; /* Align to the bottom */
+    right: 0.3rem; /* Align to the right */
+    margin: 0; /* Optional: Add some margin for spacing */
+  }
+
+  #qr3,
+  #alt3,
+  #bottom-left {
+    position: absolute; /* Position the QR div relative to .grid-item */
+    bottom: 0.1rem; /* Align to the bottom */
+    left: 0.3rem; /* Align to the right */
+    margin: 0; /* Optional: Add some margin for spacing */
+  }
+
+  #qr4,
+  #alt4,
+  #bottom-right {
+    position: absolute; /* Position the QR div relative to .grid-item */
+    bottom: 0.1rem; /* Align to the bottom */
+    right: 0.3rem; /* Align to the right */
+    margin: 0; /* Optional: Add some margin for spacing */
+  }
+
+  .qrcode img {
+    width: 3rem !important;
+    height: 3rem !important;
+    max-width: 3rem;
+    max-height: 3rem;
+    z-index: 9001;
+    border-radius: 4px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .overlay-description {
+    position: absolute;
+    bottom: 0.25rem !important;
+    left: 0.25rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 85%;
+    pointer-events: none;
+    box-sizing: border-box;
+    padding: 0 !important;
+    margin: 0 !important;
+    .text-box {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      background-color: transparent;
+      border-radius: 4px;
+      padding: 0 !important;
+      margin: 0 !important;
+
+      > * {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+      }
+
+      h1 {
+        font-size: 0.85rem;
+        text-shadow: #000 2px 2px 2px;
+      }
+
+      p {
+        text-align: left;
+        text-shadow: #000 1px 1px 1px;
+        font-weight: 400;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+/* 16 Cell Paded */
+
+.grid_16_padded {
+  height: 100vh; /* Full viewport height */
+  margin: 0 !important; /* Remove default margins */
+  padding: 0 !important; /* Remove default padding */
+
+  .grid-container {
+    display: flex; /* Use flexbox for centering */
+    flex-wrap: wrap;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    box-sizing: border-box;
+    margin: 0 !important; /* Remove default margins */
+    padding: 0 !important; /* Remove default padding */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Ensure no content extends outside the container */
+    border: 0px solid #000;
+  }
+
+  .grid-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(25% - 6px); /* Fill container width */
+    height: calc(25% - 6px); /* Fill container height */
+    overflow: hidden; /* Prevent content overflow */
+    padding: 3px;
+  }
+
+  .grid-item:nth-child(8n + 1),
+  .grid-item:nth-child(8n + 3),
+  .grid-item:nth-child(8n + 6),
+  .grid-item:nth-child(8n + 8) {
+    background-color: #000;
+  }
+
+  .grid-item:nth-child(8n + 2),
+  .grid-item:nth-child(8n + 4),
+  .grid-item:nth-child(8n + 5),
+  .grid-item:nth-child(8n + 7) {
+    background-color: #000;
+  }
+
+  .grid-item video,
+  .grid-item img {
+    width: 100%; /* Stretch to fill container width */
+    height: 100%; /* Stretch to fill container height */
+    object-fit: cover; /* Ensure content fits without cropping */
+  }
+
+  #qr1,
+  #alt1,
+  #top-left {
+    position: absolute; /* Position the QR div relative to .grid-item */
+    top: 0.3rem; /* Align to the bottom */
+    left: 0.5rem; /* Align to the right */
+    margin: 0; /* Optional: Add some margin for spacing */
+  }
+
+  #qr2,
+  #alt2,
+  #top-right {
+    position: absolute; /* Position the QR div relative to .grid-item */
+    top: 0.3rem; /* Align to the bottom */
+    right: 0.5rem; /* Align to the right */
+    margin: 0; /* Optional: Add some margin for spacing */
+  }
+
+  #qr3,
+  #alt3,
+  #bottom-left {
+    position: absolute; /* Position the QR div relative to .grid-item */
+    bottom: 0.3rem; /* Align to the bottom */
+    left: 0.5rem; /* Align to the right */
+    margin: 0; /* Optional: Add some margin for spacing */
+  }
+
+  #qr4,
+  #alt4,
+  #bottom-right {
+    position: absolute; /* Position the QR div relative to .grid-item */
+    bottom: 0.3rem; /* Align to the bottom */
+    right: 0.5rem; /* Align to the right */
+    margin: 0; /* Optional: Add some margin for spacing */
+  }
+
+  .qrcode img {
+    width: 3rem !important;
+    height: 3rem !important;
+    max-width: 3rem;
+    max-height: 3rem;
+    z-index: 9001;
+    border-radius: 4px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .overlay-description {
+    position: absolute!important;
+    bottom: .5rem!important;
+    left: .5rem!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 85%;
+    pointer-events: none;
+    box-sizing: border-box;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    .text-box {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      background-color: transparent;
+      border-radius: 4px;
+      padding: 0 !important;
+      margin: 0 !important;
+
+      > * {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+      }
+
+      h1 {
+        font-size: 0.85rem;
+        text-shadow: #000 2px 2px 2px;
+      }
+
+      p {
+        text-align: left;
+        text-shadow: #000 1px 1px 1px;
+        font-weight: 400;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+/* Columns Span (Both) */
+
+.columns {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%; /* Two equal columns */
+    grid-template-rows: 100%; /* One full-height row */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Ensure no content extends outside the container */
+  }
+
+  .grid-item:first-child {
+    grid-column: 1 / 2; /* Occupies the first column */
+    grid-row: 1 / 2; /* Occupies the full row */
+  }
+
+  .grid-item:nth-child(2) {
+    grid-column: 2 / 3; /* Occupies the second column */
+    grid-row: 1 / 2; /* Occupies the full row */
+  }
+
+  .grid-item {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    overflow: hidden;
+  }
+
+  .grid-item video,
+  .grid-item img {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Maintain aspect ratio, crop overflow */
+  }
+}
+
+/* Rows Span (both) */
+
+.rows {
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100%; /* One full-width column */
+    grid-template-rows: 50% 50%; /* Two equal rows */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Ensure no content extends outside the container */
+  }
+
+  .grid-item:first-child {
+    grid-column: 1 / 2; /* Stays in the single column */
+    grid-row: 1 / 2; /* Occupies the first half of the height */
+  }
+
+  .grid-item:nth-child(2) {
+    grid-column: 1 / 2; /* Stays in the single column */
+    grid-row: 2 / 3; /* Occupies the second half of the height */
+  }
+
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent content overflow */
+  }
+
+  .grid-item video,
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure content fits without cropping */
+  }
+}
+
+/* Left Column Span */
+
+.lcolumn {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%; /* First column takes 50%, second column takes 50% */
+    grid-template-rows: 50% 50%; /* Two equal rows for the second column */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Ensure no content extends outside the container */
+  }
+
+  .grid-item:first-child {
+    grid-column: 1 / 2; /* Occupies the first column */
+    grid-row: 1 / 3; /* Spans two rows to occupy full height */
+  }
+
+  .grid-item:nth-child(2) {
+    grid-column: 2 / 3; /* Second column */
+    grid-row: 1 / 2; /* Top row of the second column */
+  }
+
+  .grid-item:nth-child(3) {
+    grid-column: 2 / 3; /* Second column */
+    grid-row: 2 / 3; /* Bottom row of the second column */
+  }
+
+  .grid-item {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .grid-item video,
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+}
+
+/* Right Column Spans */
+
+.rcolumn {
+  .grid-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 50% 50%; /* First column takes 50%, second column takes 50% */
+    grid-template-rows: 50% 50%; /* Two equal rows for the first column */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Ensure no content extends outside the container */
+  }
+
+  .grid-item:first-child {
+    grid-column: 1 / 2; /* First column */
+    grid-row: 1 / 2; /* Top row of the first column */
+  }
+
+  .grid-item:nth-child(2) {
+    grid-column: 1 / 2; /* First column */
+    grid-row: 2 / 3; /* Bottom row of the first column */
+  }
+
+  .grid-item:nth-child(3) {
+    grid-column: 2 / 3; /* Occupies the second column */
+    grid-row: 1 / 3; /* Spans two rows to occupy full height */
+  }
+
+  .grid-item {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .grid-item video,
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Bottom Row Spans */
+
+.brow {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%; /* Two equal columns */
+    grid-template-rows: 50% 50%; /* Two equal rows for the second column */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Ensure no content extends outside the container */
+  }
+
+  .grid-item:first-child {
+    grid-column: 1 / 2; /* First column */
+    grid-row: 1 / 2; /* First row */
+  }
+
+  .grid-item:nth-child(2) {
+    grid-column: 2 / 3; /* Second column */
+    grid-row: 1 / 2; /* First row */
+  }
+
+  .grid-item:nth-child(3) {
+    grid-column: 1 / 3; /* Occupies both columns */
+    grid-row: 2 / 3; /* Second row */
+  }
+
+  .grid-item {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .grid-item video,
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+}
+
+/* Top Row Spans */
+
+.trow {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%; /* Two equal columns */
+    grid-template-rows: 50% 50%; /* Two equal rows for the second column */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Ensure no content extends outside the container */
+  }
+
+  .grid-item:first-child {
+    grid-column: 1 / 3; /* Occupies both columns */
+    grid-row: 1 / 2; /* First row (50% height) */
+  }
+
+  .grid-item:nth-child(2) {
+    grid-column: 1 / 2; /* First column */
+    grid-row: 2 / 3; /* Second row (50% height) */
+  }
+
+  .grid-item:nth-child(3) {
+    grid-column: 2 / 3; /* Second column */
+    grid-row: 2 / 3; /* Second row (50% height) */
+  }
+
+  .grid-item {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .grid-item video,
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+}
+
+.wait_launch {
+  img {
+    width: 75% !important;
+    height: 75% !important;
+    max-width: 75% !important;
+    max-height: 75% !important;
+    padding: 3rem !important;
+    background-color: transparent !important;
+    object-fit: contain !important;
+  }
+}

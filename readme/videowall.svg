@@ -1,0 +1,62 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for the video play icon -->
+    <linearGradient id="videoGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#cccccc" />
+    </linearGradient>
+    <!-- Drop shadow filter for a subtle 3D effect -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <!-- Gradient for the camera body -->
+    <linearGradient id="cameraBodyGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#bbbbbb"/>
+    </linearGradient>
+    <!-- Radial gradient for the camera lens -->
+    <radialGradient id="lensGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#eeeeee"/>
+      <stop offset="100%" stop-color="#888888"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Top-left cell: Video icon -->
+  <rect x="0" y="0" width="200" height="200" fill="#e6ffe6" stroke="#000" stroke-width="2"/>
+  <!-- Play button centered via points that average to (100,100) -->
+  <polygon points="80,70 80,130 140,100" 
+           fill="url(#videoGradient)" stroke="#000" stroke-width="2" filter="url(#shadow)"/>
+  
+  <!-- Top-right cell: Image (Camera) icon -->
+  <rect x="200" y="0" width="200" height="200" fill="#e6ffe6" stroke="#000" stroke-width="2"/>
+  <g transform="translate(200,0)">
+    <!-- Camera body -->
+    <rect x="60" y="80" width="80" height="60" 
+          fill="url(#cameraBodyGradient)" stroke="#000" stroke-width="2" filter="url(#shadow)"/>
+    <!-- Camera lens -->
+    <circle cx="100" cy="110" r="15" 
+            fill="url(#lensGradient)" stroke="#000" stroke-width="2" filter="url(#shadow)"/>
+    <!-- Small viewfinder -->
+    <rect x="75" y="60" width="30" height="15" 
+          fill="url(#cameraBodyGradient)" stroke="#000" stroke-width="2" filter="url(#shadow)"/>
+  </g>
+  
+  <!-- Bottom-left cell: Image (Camera) icon -->
+  <rect x="0" y="200" width="200" height="200" fill="#e6ffe6" stroke="#000" stroke-width="2"/>
+  <g transform="translate(0,200)">
+    <!-- Reusing the same camera icon design -->
+    <rect x="60" y="80" width="80" height="60" 
+          fill="url(#cameraBodyGradient)" stroke="#000" stroke-width="2" filter="url(#shadow)"/>
+    <circle cx="100" cy="110" r="15" 
+            fill="url(#lensGradient)" stroke="#000" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="75" y="60" width="30" height="15" 
+          fill="url(#cameraBodyGradient)" stroke="#000" stroke-width="2" filter="url(#shadow)"/>
+  </g>
+  
+  <!-- Bottom-right cell: Video icon -->
+  <rect x="200" y="200" width="200" height="200" fill="#e6ffe6" stroke="#000" stroke-width="2"/>
+  <g transform="translate(200,200)">
+    <polygon points="80,70 80,130 140,100" 
+             fill="url(#videoGradient)" stroke="#000" stroke-width="2" filter="url(#shadow)"/>
+  </g>
+</svg>
