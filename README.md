@@ -10,11 +10,11 @@ This is a simple javascript app that will produce a webpage running slideshows w
 **note**: This app was previously used to create *proof-of-concept* examples for the open-source **Universal Digital Signage** app due to be released on [DivisionByInfinity](https://github.com/divisionbyinfinity) soon. 
 <br><br>
 <div>
-<a style="border: 1px solid cyan; border-radius: 4px; padding: .5rem 1rem; width: fit-content" href="https://divisionbyinfinity.github.io/developr/videowall/">VIDEOWALL DEMO</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Press <b>F11</b> for <i>full-screen mode</i> to see the slides as they would appear on a dedicated display.
+<a style="border: 1px solid cyan; border-radius: 4px; padding: .5rem 1rem; width: fit-content" href="https://divisionbyinfinity.github.io/videowall/">VIDEOWALL DEMO</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Press <b>F11</b> for <i>full-screen mode</i> to see the slides as they would appear on a dedicated display.
 </div>
 <br>
 <div>
-<a style="border: 1px solid cyan; border-radius: 4px; padding: .5rem 1rem; width: fit-content" href="https://divisionbyinfinity.github.io/developr/videowall/json">JSON SLIDE GENERATOR</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a style="border: 1px solid cyan; border-radius: 4px; padding: .5rem 1rem; width: fit-content" href="https://divisionbyinfinity.github.io/videowall/json">JSON SLIDE GENERATOR</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </div>
 
 ## Features:
