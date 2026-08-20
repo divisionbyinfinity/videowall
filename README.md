@@ -41,6 +41,41 @@ This is a simple javascript app that will produce a webpage running slideshows w
 - You do not have to specify both a **beginRotation** and **endRotation**.  By only specifying a **beginRotation**, the slide will join the rotation at that time.  By only specifying an **endRotation**, the slide will leave the rotation at that time.
 - **JSON Generator** updated.
 
+## Slide Item Duration
+
+Each slide has an overall **duration** in milliseconds. Each item inside an element has an **item_duration**, which supports these values:
+
+- A number of **2 or greater** is the item's duration in milliseconds.
+- A number **less than 2** is a fraction of the slide's overall duration. For example, **0.25** uses one quarter of the slide duration.
+- The string **"divide"** divides the slide's overall duration equally among the items in that element.
+
+The **"divide"** calculation is performed independently for each element. For a slide with a duration of **16000**, an element containing four items displays each item for **4000 ms**, while an element containing two items displays each item for **8000 ms**. See **slides/grid4_independant.json** for an example.
+
+~~~json
+"element_001": {
+  "item_001": {
+    "contentType": "image",
+    "content": "example_image01.webp",
+    "item_duration": "divide"
+  }
+}
+~~~
+
+## Optional Item Properties
+
+The following item properties are optional. If one is omitted, it is treated as **null**:
+
+- **qrId**
+- **qrFile**
+- **altId**
+- **altFile**
+- **altBg**
+- **titleClass**
+- **slideTitle**
+- **description**
+
+This allows an item that does not need QR codes, alternate images, or text overlays to contain only **contentType**, **content**, and **item_duration**.
+
 ## Aspect Ratios and Resolutions
 As mentioned above the base aspect ratio is **16:9**.  Basically the base aspect ratio should match the aspect ratio of the native resolution of your display. **16:9** is common but not universal.  We set our displays to **1920x1080** (which is **16:9**) but this is only marginally meaningful, mostly due to handful of *CSS* settings in the **default.css** for positioning. If you set your displays to a resolution with an aspect ratio of **16:9** and you create your content with the dimensions **1920x1080** (which has an aspect ratio of **16:9**), everything will look great and fit on your videowall (or single display) perfectly *for most common use cases* when using this app.
 

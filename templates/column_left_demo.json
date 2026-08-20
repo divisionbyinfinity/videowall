@@ -1,0 +1,97 @@
+{
+  "title": "Videowall Slide: Left Column Spans Demo",
+  "head": "default",
+  "layout": "lcolumn",
+  "contentChild": "demo",
+  "duration": 8000,
+  "fade": 3000,
+  "timer": "no",
+  "timerStyle": "timer-green",
+  "launch": null,
+  "launch-wait": null,
+  "launch-wait-slide": null,
+  "element_001": {
+    "item_001": {
+      "contentType": "image",
+      "content": "example_colum01.webp",
+      "item_duration": 0.5,
+      "qrId": null,
+      "qrFile": null,
+      "altId": null,
+      "altFile": null,
+      "altBg": null,
+      "titleClass": "overlay-center",
+      "slideTitle": "Example 1",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue quam urna, vel finibus nibh tincidunt eu. Ut nec enim massa."
+    },
+    "item_002": {
+      "contentType": "image",
+      "content": "example_colum02.webp",
+      "item_duration": 0.6,
+      "qrId": null,
+      "qrFile": null,
+      "altId": null,
+      "altFile": null,
+      "altBg": null,
+      "titleClass": null,
+      "slideTitle": null,
+      "description": null
+    }    
+  },
+    "element_002": {
+        "item_001": {
+        "contentType": "video",
+        "content": "default_video11.webm",
+        "item_duration": 0.5,
+        "qrId": null,
+        "qrFile": null,
+        "altId": null,
+        "altFile": null,
+        "altBg": null,
+        "titleClass": null,
+        "slideTitle": null,
+        "description": null
+      },
+      "item_002": {
+        "contentType": "video",
+        "content": "default_video12.webm",
+        "item_duration": 0.6,
+        "qrId": null,
+        "qrFile": null,
+        "altId": null,
+        "altFile": null,
+        "altBg": null,
+        "titleClass": null,
+        "slideTitle": null,
+        "description": null
+      }
+    },  
+    "element_003": {
+      "item_001": {
+        "contentType": "image",
+        "content": "example_image05.webp",
+        "item_duration": 0.5,
+        "qrId": null,
+        "qrFile": null,
+        "altId": null,
+        "altFile": null,
+        "altBg": null,
+        "titleClass": null,
+        "slideTitle": null,
+        "description": null
+      },
+      "item_002": {
+        "contentType": "image",
+        "content": "example_image12.webp",
+        "item_duration": 0.6,
+        "qrId": null,
+        "qrFile": null,
+        "altId": null,
+        "altFile": null,
+        "altBg": null,
+        "titleClass": null,
+        "slideTitle": null,
+        "description": null
+      }
+    }
+}  

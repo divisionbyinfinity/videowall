@@ -73,6 +73,13 @@ function appendTemplates(headHTML, layoutHTML, slideTitle) {
 	document.body.innerHTML = layoutHTML;
 }
 
+function resolveItemDuration(itemDuration, totalSlideDuration, itemCount) {
+	if (itemDuration === "divide") {
+		return totalSlideDuration / itemCount;
+	}
+	return itemDuration;
+}
+
 function createSlideContent(slideData, config) {
 	const parent = document.getElementById("slideshow_parent");
 	if (!parent) return;
@@ -88,7 +95,8 @@ function createSlideContent(slideData, config) {
 		gridItem.id = key;
 		parent.appendChild(gridItem);
 
-		const items = Object.keys(elementData).map((itemKey) => {
+		const itemKeys = Object.keys(elementData);
+		const items = itemKeys.map((itemKey) => {
 			const item = elementData[itemKey];
 			// Use item.contentChild if available; otherwise, use slideData.contentChild from the root of the slide JSON.
 			const folderCandidate = item.contentChild || slideData.contentChild;
@@ -113,15 +121,19 @@ function createSlideContent(slideData, config) {
 
 			return {
 				mediaElement: mediaElement,
-				duration: item.item_duration,
-				qrId: item.qrId,
-				qrFile: item.qrFile,
-				altId: item.altId,
-				altFile: item.altFile,
-				altBg: item.altBg,
-				titleClass: item.titleClass,
-				slideTitle: item.slideTitle,
-				description: item.description,
+				duration: resolveItemDuration(
+					item.item_duration,
+					slideData.duration,
+					itemKeys.length
+				),
+				qrId: item.qrId ?? null,
+				qrFile: item.qrFile ?? null,
+				altId: item.altId ?? null,
+				altFile: item.altFile ?? null,
+				altBg: item.altBg ?? null,
+				titleClass: item.titleClass ?? null,
+				slideTitle: item.slideTitle ?? null,
+				description: item.description ?? null,
 				contentChild: childFolder, // Now correctly assigned.
 			};
 		});

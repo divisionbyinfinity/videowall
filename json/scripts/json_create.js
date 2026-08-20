@@ -275,6 +275,7 @@ function processDuration(value) {
 
 function processItemDuration(value, globalDuration) {
   value = value.trim();
+  if (value === "divide") return value;
   let num = Number(value);
   if (num < 2) return num * globalDuration;
   return value.endsWith("000") ? num : num * 1000;

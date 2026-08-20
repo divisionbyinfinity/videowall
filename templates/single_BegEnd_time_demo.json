@@ -1,0 +1,69 @@
+{
+  "title": "Videowall Slide: Single Screen Rotate Time",
+  "head": "default",
+  "layout": "single",
+  "contentChild": "demo",
+  "duration": 40000,
+  "fade": 3000,
+  "timer": "no",
+  "timerStyle": "timer-green",
+  "beginRotation": "12:00",
+  "endRotation": "13:00",
+  "launch": null,
+  "launch-wait": null,
+  "launch-wait-slide": null,
+    "element_001": {
+    "item_001": {
+    "contentType": "video",
+     "content": "default_video1.webm",
+     "item_duration": 0.25,
+     "qrId": null,
+     "qrFile": null,
+     "altId": null,
+     "altFile": null,
+     "altBg": null,
+     "titleClass": "overlay-center",
+     "slideTitle": "Rotate Time",
+     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue quam urna, vel finibus nibh tincidunt eu. Ut nec enim massa."
+    },
+    "item_002": {
+      "contentType": "image",
+      "content": "example_image01.webp",
+      "item_duration": 0.25,
+      "qrId": null,
+      "qrFile": null,
+      "altId": null,
+      "altFile": null,
+      "altBg": null,
+      "titleClass": null,
+      "slideTitle": null,
+      "description": null
+    },
+    "item_003": {
+      "contentType": "video",
+      "content": "default_video2.webm",
+      "item_duration": 0.25,
+      "qrId": null,
+      "qrFile": null,
+      "altId": null,
+      "altFile": null,
+      "altBg": null,
+      "titleClass": null,
+      "slideTitle": null,
+      "description": null
+    },
+    "item_004": {
+      "contentType": "image",
+      "content": "example_image02.webp",
+      "item_duration": 0.26,
+      "qrId": null,
+      "qrFile": null,
+      "altId": null,
+      "altFile": null,
+      "altBg": null,
+      "titleClass": null,
+      "slideTitle": null,
+      "description": null
+    }
+  }
+}  

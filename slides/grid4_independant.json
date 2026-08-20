@@ -1,0 +1,71 @@
+{
+  "title": "Videowall Slide: 4 Cell Screen Demo",
+  "head": "default",
+  "layout": "grid_4",
+  "contentChild": "demo",
+  "duration": 16000,
+  "fade": 3000,
+  "timer": "no",
+  "timerStyle": "timer-green",
+  "launch": null,
+  "launch-wait": null,
+  "launch-wait-slide": null,
+  "element_001": {
+    "item_001": {
+      "contentType": "image",
+       "content": "example_image01.webp",
+       "item_duration": "divide"
+    },
+     "item_002": {
+       "contentType": "image",
+       "content": "example_image02.webp",
+       "item_duration": "divide"
+      },
+      "item_003": {
+        "contentType": "image",
+        "content": "example_image03.webp",
+        "item_duration": "divide"
+      },
+      "item_004": {
+        "contentType": "image",
+        "content": "example_image04.webp",
+        "item_duration": "divide"
+      }
+    },
+    "element_002": {
+      "item_001": {
+        "contentType": "image",
+        "content": "example_image05.webp",
+        "item_duration": "divide"
+      },
+        "item_002": {
+          "contentType": "image",
+          "content": "example_image06.webp",
+          "item_duration": "divide"
+        },
+        "item_003": {
+          "contentType": "image",
+          "content": "example_image08.webp",
+          "item_duration": "divide"
+        }
+    },
+    "element_003": {
+      "item_001": {
+        "contentType": "image",
+        "content": "example_image09.webp",
+         "item_duration": "divide"
+        },
+      "item_002": {
+        "contentType": "image",
+        "content": "example_image12.webp",
+        "item_duration": "divide"
+        }
+      },
+      "element_004": {
+          "item_001": {
+            "contentType": "image",
+            "content": "example_image13.webp",
+             "item_duration": "divide"
+          }
+        }
+  }  

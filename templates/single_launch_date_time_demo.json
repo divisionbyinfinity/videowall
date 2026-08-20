@@ -1,0 +1,54 @@
+{
+  "title": "Videowall Slide: Single Screen Scheduled Date Time Demo",
+  "head": "default",
+  "layout": "single",
+  "contentChild": "demo",
+  "duration": 30000,
+  "fade": 1000,
+  "timer": "no",
+  "timerStyle": null,
+  "launch": "2025-04-04 11:47:00",
+  "launch-wait": 10,
+  "launch-wait-slide": "launch_presentation.json",
+    "element_001": {
+        "item_001": {
+          "contentType": "video",
+          "content": "default_video8.webm",
+          "item_duration": 0.33,
+          "qrId": null,
+          "qrFile": null,
+          "altId": null,
+          "altFile": null,
+          "altBg": null,
+          "titleClass": null,
+          "slideTitle": null,
+          "description": null
+        },
+        "item_002": {
+          "contentType": "video",
+          "content": "default_video9.webm",
+          "item_duration": 0.33,
+          "qrId": null,
+          "qrFile": null,
+          "altId": null,
+          "altFile": null,
+          "altBg": null,
+          "titleClass": null,
+          "slideTitle": null,
+          "description": null        
+        },
+        "item_003": {
+          "contentType": "video",
+          "content": "default_video10.webm",
+          "item_duration": 0.35,
+          "qrId": null,
+          "qrFile": null,
+          "altId": null,
+          "altFile": null,
+          "altBg": null,
+          "titleClass": null,
+          "slideTitle": null,
+          "description": null        
+        }
+    }
+}  
