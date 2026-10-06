@@ -16,10 +16,10 @@ This is a simple javascript app that will produce a webpage running slideshows w
 </div>    
 <br>
 
-## Spring 2026 Design Students Show
-Each student should create their own slideshow: they will be added to the playlist lindex and play one after the other.
+## Spring Design Students Show
+There are several ways the content can be displayed: Talk with your instructor before you begin preparing for the Design Students Show.  
 
-If you include a video with audio - the audio output on the videowall is capped with a max volume of 40%.
+If you include a video with audio - the audio output on the videowall is capped with a max volume of 35%.
 
 ## Help?
 You can contact me by email to schedule an appointment: michael.baggett@unt.edu.  Don't wait until the week before the show as we will be busy setting up for the show.  Please include other students in your appointment as I won't be able to meet with each student individually.  In the past we have had sessions with as many as eight people and it has gone very smoothly. It is fine to schedule follow ups if you need to. I want your show to be succesfull! Thanks. I am very much looking forward to your show this spring!
@@ -44,7 +44,7 @@ This app was created specifically with the Annual Spring Design Students Show in
 
 
 ## Recently Added Feature:
-<font color="red"><strong>April 4, 2025</strong></font>
+<font color="red"><strong>April 4, 2026</strong></font>
 - You can now schedule a window of time that a slide is shown using **beginRotation** and **endRotation**.  If you only specify a time  (**12:00:00 PM**), these windows will be **daily**.  If you specify a date and time (**2025-04-01 12:00:00**), the window will occur on the specified date.
 - You do not have to specify both a **beginRotation** and **endRotation**.  By only specifying a **beginRotation**, the slide will join the rotation at that time.  By only specifying an **endRotation**, the slide will leave the rotation at that time.
 - **JSON Generator** updated.
